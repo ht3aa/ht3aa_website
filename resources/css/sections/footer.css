@@ -1,0 +1,13 @@
+footer {
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer li:not(:last-child) {
+    margin-right: 15px;
+}

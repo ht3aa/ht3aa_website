@@ -1,0 +1,78 @@
+header {
+    padding: 100px 0;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: bold;
+}
+
+header h1 span {
+    color: orangered;
+}
+
+.title {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.certificatesContainer {
+    display: grid;
+    margin: 0 auto;
+    width: max-content;
+    grid-template-columns: repeat(3, 350px);
+    gap: 8px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .certificatesContainer {
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+.imgContainer {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.certificatesContainer img {
+    width: 100%;
+    height: 100%;
+    transform: translate(-5px, -5px);
+    transition: all 0.3s ease-in-out;
+}
+
+.imgLink {
+    width: 100%;
+    height: 100px;
+    background-color: #99999980;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    bottom: -100px;
+    left: 50%;
+    transition: all 0.3s ease-in-out 0.3s;
+    transform: translateX(-50%);
+}
+
+.appreciationCertificate {
+    box-shadow: 4px 4px 0px #2600ff;
+}
+
+.completionCertificate {
+    box-shadow: 4px 4px 0px #ff0000;
+}
+
+.imgContainer:hover img {
+    cursor: pointer;
+    transform: translate(0px, 0px);
+    box-shadow: none;
+}
+
+.imgContainer:hover .imgLink {
+    bottom: 0px;
+}
